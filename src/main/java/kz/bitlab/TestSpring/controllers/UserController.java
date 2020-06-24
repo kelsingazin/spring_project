@@ -8,7 +8,10 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.Collections;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 /**
  * @author Assylkhan
@@ -36,6 +39,12 @@ public class UserController {
     public SuccessResponse updateUser(@PathVariable Long id) {
         this.userService.delete(id);
         return SuccessResponse.builder().message("user with id " + id + " deleted").build();
+    }
+
+    @GetMapping("/check/{username}")
+    public Map checkUsername(@PathVariable String username){
+        User user = this.userService.findByUsername(username);
+        return Collections.singletonMap("exists", Objects.nonNull(user));
     }
 
 }

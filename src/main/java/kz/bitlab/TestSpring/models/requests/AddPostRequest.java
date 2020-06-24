@@ -17,7 +17,6 @@ public class AddPostRequest {
 
     private String title;
     private String description;
-    private Long userId;
-    private MultipartFile file;
+
 
 }

@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import kz.bitlab.TestSpring.models.reponses.TokenResponse;
 import kz.bitlab.TestSpring.services.UserService;
 import org.springframework.http.HttpHeaders;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -76,7 +77,12 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
                 .compact();
         res.addHeader(HEADER_STRING, TOKEN_PREFIX + token);
 
-        String responseToClient = token;
+        TokenResponse tokenResp = TokenResponse.builder()
+                .token(token)
+                .type("Bearer ")
+                .build();
+
+        String responseToClient = (new ObjectMapper()).writeValueAsString(tokenResp);
         res.setStatus(HttpServletResponse.SC_OK);
         res.setHeader(HttpHeaders.CONTENT_TYPE, "text");
         res.getWriter().print(responseToClient);

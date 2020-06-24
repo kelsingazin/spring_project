@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @author Assylkhan
@@ -13,8 +14,8 @@ import java.util.List;
  */
 @Repository
 public interface PostRepository extends JpaRepository<Post, Long> {
+    List<Post> findAllByActiveIsTrue();
 
-//    @Query("select p from Post where description = :name")
-//    List<Post> findCustom(@Param("name") String name);
+    Optional<Post> findByIdAndActiveIsTrue(Long id);
 
 }
