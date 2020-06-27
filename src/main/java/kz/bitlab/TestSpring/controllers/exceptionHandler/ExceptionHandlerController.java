@@ -7,11 +7,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * @author Assylkhan
- * on 26.03.2020
- * @project TestSpring
- */
+
 @RestController
 @ControllerAdvice
 public class ExceptionHandlerController {

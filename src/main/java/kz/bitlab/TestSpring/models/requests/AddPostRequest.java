@@ -5,11 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.web.multipart.MultipartFile;
 
-/**
- * @author Assylkhan
- * on 28.03.2020
- * @project TestSpring
- */
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

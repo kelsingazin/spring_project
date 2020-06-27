@@ -15,11 +15,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.*;
 
-/**
- * @author Assylkhan
- * on 26.03.2020
- * @project TestSpring
- */
+
 @Service
 @AllArgsConstructor
 public class UserServiceImpl implements UserService {

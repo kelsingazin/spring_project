@@ -5,11 +5,7 @@ import kz.bitlab.TestSpring.models.exceptions.SystemServiceException;
 
 import java.util.List;
 
-/**
- * @author Assylkhan
- * on 28.03.2020
- * @project TestSpring
- */
+
 public interface PostService {
 
     Post addPost(String title, String description, String username) throws SystemServiceException;

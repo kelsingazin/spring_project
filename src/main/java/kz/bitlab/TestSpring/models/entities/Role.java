@@ -7,13 +7,6 @@ import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;
 
-/**
- * @author Assylkhan
- * on 26.03.2020
- * @project TestSpring
- */
-
-
 @Data
 @Entity
 @Table(name = "roles")

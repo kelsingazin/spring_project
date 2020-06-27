@@ -7,11 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-/**
- * @author Assylkhan
- * on 26.03.2020
- * @project TestSpring
- */
+
 @Data
 @Entity
 @Builder

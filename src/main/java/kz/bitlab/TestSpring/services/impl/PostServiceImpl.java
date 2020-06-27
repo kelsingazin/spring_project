@@ -16,11 +16,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
-/**
- * @author Assylkhan
- * on 28.03.2020
- * @project TestSpring
- */
+
 @Service
 @AllArgsConstructor
 public class PostServiceImpl implements PostService {

@@ -13,11 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-/**
- * @author Assylkhan
- * on 26.03.2020
- * @project TestSpring
- */
+
 @AllArgsConstructor
 @RestController
 @RequestMapping("/api/users")

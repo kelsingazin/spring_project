@@ -6,11 +6,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 
 import java.util.List;
 
-/**
- * @author Assylkhan
- * on 26.03.2020
- * @project TestSpring
- */
+
 public interface UserService extends UserDetailsService {
 
     User registerUser(String username, String password) throws SystemServiceException;
